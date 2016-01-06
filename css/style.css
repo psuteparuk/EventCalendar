@@ -1,0 +1,68 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  color: #1B1B1B;
+  background: #FBFBFB;
+  font: normal 100%/1.4 serif;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+table, th, td {
+  border: 1px solid #EEE;
+  *border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.main {
+  position: relative;
+  width: 720px;
+  margin: 0 auto;
+  padding-top: 10px;
+}
+
+.main ul {
+  display: inline-block;
+  list-style: none outside none;
+  margin: 0;
+  padding: 0;
+  float: left;
+}
+
+.main .legend {
+  width: 90px;
+  padding-right: 10px;
+  font-size: 9px;
+}
+
+.main .legend li {
+  color: #A0A0A0;
+  height: 30px;
+  line-height: 30px;
+  text-align: right;
+}
+
+.main .legend li span {
+  color: #737373;
+  font-size: 12px;
+  font-weight: bold;
+  margin-right: 3px;
+}
+
+.main .calendar {
+  position: relative;
+  top: 15px;
+  width: 600px;
+  padding: 0 10px;
+}
+
+.main .calendar-bg {
+  position: absolute;
+  top: 25px;
+  left: 100px;
+  width: 620px;
+  z-index: -1;
+}

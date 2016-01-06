@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Event Calendar</title>
+
+    <meta name="author" content="Potcharapol Suteparuk">
+    <meta name="description" content="Google-style event calendar">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+  </head>
+
+  <body>
+    <div class="main" role="main">
+      <ul class="legend"></ul>
+      <ul class="calendar"></ul>
+      <table class="calendar-bg" cellspacing="0"></table>
+    </div>
+
+    <script type="text/javascript" src="js/lib/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/calendar.js"></script>
+    <script type="text/javascript" src="js/calendarView.js"></script>
+    <script type="text/javascript">
+      $(function() {
+        var calendar = new Calendar();
+        var calendarView = new CalendarView(calendar, { numHours: 12 });
+        calendarView.render();
+
+        function layOutDay(events) {
+          calendar.update(events);
+        }
+
+        window.layOutDay = layOutDay;
+
+        // Initial State
+        layOutDay([
+          { start: 30, end: 150 },
+          { start: 540, end: 600 },
+          { start: 560, end: 620 },
+          { start: 610, end: 670 }
+        ]);
+      });
+    </script>
+  </body>
+</html>
