@@ -53,6 +53,7 @@ Calendar.prototype.setEvents = function(events) {
 
 Calendar.prototype.update = function(events) {
   this.setEvents(events);
+  $(this).trigger('eventsUpdated');
 };
 
 /********** Event Model **********/
