@@ -45,6 +45,7 @@ CalendarView.prototype.renderBackground = function() {
 CalendarView.prototype.renderEvents = function() {
   var $calendar = $('.calendar');
   var calendarWidth = $calendar.width();
+  $calendar.empty();
 
   // The width and position of each event depends on the
   // number of columns in a group.
@@ -73,11 +74,17 @@ var EventView = function(event, options) {
 EventView.prototype.render = function() {
   var $calendar = $('.calendar');
   var $eventItem = $('<li></li>');
+  var $content = $('<div class="content"></div>');
+
   $eventItem.css({
     left: (this.options.left || 10) + 'px',
     top: (this.options.top || this.event.start) + 'px',
     width: (this.options.width || $calendar.width()) + 'px',
     height: (this.options.height || (this.event.end-this.event.start)) + 'px'
   });
+
+  $content.append('<p class="name">' + (this.options.name || 'Sample item') + '</p>');
+  $content.append('<p class="location">' + (this.options.location || 'Sample location') + '</p>');
+  $eventItem.append($content);
   $calendar.append($eventItem);
 };

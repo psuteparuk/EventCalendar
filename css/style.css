@@ -12,7 +12,7 @@ body {
 }
 
 table, th, td {
-  border: 1px solid #DDD;
+  border: 1px solid #E0E0E0;
   *border-collapse: collapse;
   border-spacing: 0;
 }
@@ -32,6 +32,10 @@ table, th, td {
   float: left;
 }
 
+.main li {
+  color: #A0A0A0;
+}
+
 .main .legend {
   width: 90px;
   padding-right: 10px;
@@ -39,7 +43,6 @@ table, th, td {
 }
 
 .main .legend li {
-  color: #A0A0A0;
   height: 30px;
   line-height: 30px;
   text-align: right;
@@ -57,11 +60,32 @@ table, th, td {
   top: 15px;
   width: 600px;
   padding: 0 10px;
+  font-size: 9px;
 }
 
 .main .calendar li {
   position: absolute;
-  background-color: #E9E9E9;
+  background-color: #F0F0F0;
+}
+
+.main .calendar li .content {
+  padding: 0 10px;
+  height: 100%;
+  float: left;
+  border-left: 6px solid;
+  border-left-color: #47B28D;
+}
+
+.main .calendar li .content .name {
+  color: #47B28D;
+  margin-top: 10px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.main .calendar li .content .location {
+  margin: 0;
 }
 
 .main .calendar-bg {
